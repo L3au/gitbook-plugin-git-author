@@ -1,0 +1,32 @@
+{
+  "name": "gitbook-plugin-git-author",
+  "description": "show git author for each article of gitbook",
+  "main": "index.js",
+  "version": "0.0.1",
+  "author": "L3au <leshu.lau@gmail.com>",
+  "engines": {
+    "node": ">4.0.0",
+    "gitbook": ">3.0.0"
+  },
+  "keywords": [
+    "gitbook",
+    "plugin",
+    "git",
+    "author",
+    "signature",
+    "modified",
+    "creator"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/L3au/gitbook-plugin-git-author.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/L3au/gitbook-plugin-git-author/issues"
+  },
+  "dependencies": {
+    "execa": "^0.4.0",
+    "moment": "^2.13.0"
+  }
+}
