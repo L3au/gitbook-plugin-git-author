@@ -23,6 +23,7 @@ module.exports = {
     hooks: {
         "page:before": function (page) {
             const defaults = {
+                position: 'bottom',
                 createTpl: 'Created by {user} at {timeStamp}',
                 modifyTpl: 'Last modified by {user} at {timeStamp}',
                 timeStampFormat: 'YYYY-MM-DD HH:mm:ss'
@@ -30,6 +31,7 @@ module.exports = {
             const pluginConfig = this.config.get('pluginsConfig')['git-author'];
             const options = Object.assign({}, defaults, pluginConfig);
 
+            const position = options.position;
             const createTpl = options.createTpl;
             const modifyTpl = options.modifyTpl;
             const timeStampFormat = options.timeStampFormat;
@@ -55,7 +57,7 @@ module.exports = {
                 const lastCommit = commits[0];
                 const firstCommit = commits.slice(-1)[0];
 
-                let gitAuthorContent = '<div class="git-author-container">';
+                let gitAuthorContent = `<div class="git-author-container git-author-${position}">`;
 
                 if (modifyTpl) {
                     const modifyMsg = substitute(modifyTpl, lastCommit);
@@ -69,7 +71,11 @@ module.exports = {
 
                 gitAuthorContent += '</div>';
 
-                page.content += gitAuthorContent;
+                if (position === 'top') {
+                    page.content = gitAuthorContent + page.content;
+                } else {
+                    page.content += gitAuthorContent;
+                }
 
                 return page;
             }).catch((e) => {
