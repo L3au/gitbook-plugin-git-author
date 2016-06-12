@@ -21,7 +21,7 @@ module.exports = {
     },
 
     hooks: {
-        "page:before": function (page) {
+        "page": function (page) {
             const defaults = {
                 position: 'bottom',
                 createTpl: 'Created by {user} at {timeStamp}',
