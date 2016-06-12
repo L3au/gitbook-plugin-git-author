@@ -37,11 +37,12 @@ module.exports = {
             return execa.shell(`git log --format="%an|%at" -- ${page.rawPath}`).then((ret) => {
                 // none commit to this file
                 if (!ret.stdout) {
+                    this.log.debug(`none commit to file ${page.path}`);
                     return page;
                 }
 
                 const commits = ret.stdout.split(/\r?\n/).map((log) => {
-                    const arr = log.split('|').map(r => r.trim());
+                    const arr = log.split('|');
                     const timeStamp = moment(arr[1] * 1000).format(timeStampFormat);
 
                     return {
@@ -72,7 +73,8 @@ module.exports = {
 
                 return page;
             }).catch((e) => {
-                this.log.info(e);
+                this.log.warn('initialize git repository and commit files firstly');
+                this.log.warn(e);
                 return page;
             });
         }
