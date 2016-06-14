@@ -1,5 +1,6 @@
 'use strict';
 
+const path = require('path');
 const execa = require('execa');
 const moment = require('moment');
 
@@ -28,6 +29,7 @@ module.exports = {
                 modifyTpl: 'Last modified by {user} at {timeStamp}',
                 timeStampFormat: 'YYYY-MM-DD HH:mm:ss'
             };
+            const bookRoot = this.resolve('');
             const pluginConfig = this.config.get('pluginsConfig')['git-author'];
             const options = Object.assign({}, defaults, pluginConfig);
 
@@ -36,7 +38,9 @@ module.exports = {
             const modifyTpl = options.modifyTpl;
             const timeStampFormat = options.timeStampFormat;
 
-            return execa.shell(`git log --format="%an|%at" -- ${page.rawPath}`).then((ret) => {
+            return execa.shell(`git log --format="%an|%at" -- ${page.rawPath}`, {
+                cwd: bookRoot
+            }).then((ret) => {
                 // none commit to this file
                 if (!ret.stdout) {
                     this.log.debug(`none commit to file ${page.path}`);
