@@ -74,6 +74,7 @@ You can use `{user}` `{timeStamp}` as placeholder for username and timeStamp
 default: 
 
 createTpl: `Created by {user} {timeStamp}`
+
 modifyTpl: `Last modified by {user} {timeStamp}`
 
 You may disable one of them by set it to a FALSY value.
