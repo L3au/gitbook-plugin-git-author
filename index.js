@@ -21,6 +21,12 @@ module.exports = {
         ]
     },
 
+    filters: {
+        timeFormat: function(time, format) {
+            return moment(time).format(format || moment.defaultFormat);
+        }
+    },
+
     hooks: {
         "page": function (page) {
             const defaults = {
