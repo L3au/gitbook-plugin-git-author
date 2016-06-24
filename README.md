@@ -2,9 +2,12 @@
 
 This is a plugin for automatically adding author and timestamp to each gitbook article, including creator and last modified user from git commits
 
+![git-author-preview](preview.png)
+
 ## Usage
 
 ### Recommended Environments
+
 
 - Node.js 4.0+
 - npm 3.0+
@@ -91,8 +94,37 @@ default: `YYYY-MM-DD HH:mm:ss`
 
 use [moment](https://www.npmjs.com/package/moment) to process timeStamp
 
+## Useful filters
 
-## custom styles
+You can use `timeFormat` nunjucks filter to format time string in each article.
+
+### `timeFormat`([timeFormatString])
+
+`README.md`
+
+```
+{{ 1466749374153 | timeFormat('YYYY-MM-DD') }}
+```
+
+output
+
+```
+2016-06-24
+```
+
+`README.md`
+
+```
+{{ '2016-06-24T07:27:04.365Z' | timeFormat('MMMM Do YYYY, h:mm:ss a') }}
+```
+
+output
+
+```
+June 24th 2016, 3:27:04 pm
+```
+
+## Custom styles
 
 change default style by add a custom css file to your gitbook
 
@@ -101,7 +133,7 @@ change default style by add a custom css file to your gitbook
 ```js
 {
     "styles": {
-        "website": "./website.css"
+        "website": "./styles/website.css"
     }
 }
 ```
@@ -117,5 +149,3 @@ change default style by add a custom css file to your gitbook
     float: none;
 }
 ```
-
-
