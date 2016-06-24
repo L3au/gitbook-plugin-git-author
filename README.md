@@ -2,7 +2,7 @@
 
 This is a plugin for automatically adding author and timestamp to each gitbook article, including creator and last modified user from git commits
 
-![git-author-preview](preview.png)
+![git-author-preview](https://raw.githubusercontent.com/L3au/gitbook-plugin-git-author/master/preview.png)
 
 ## Usage
 
@@ -100,8 +100,6 @@ You can use `timeFormat` nunjucks filter to format time string in each article.
 
 ### `timeFormat`([timeFormatString])
 
-`README.md`
-
 ```
 {{ 1466749374153 | timeFormat('YYYY-MM-DD') }}
 ```
@@ -111,8 +109,6 @@ output
 ```
 2016-06-24
 ```
-
-`README.md`
 
 ```
 {{ '2016-06-24T07:27:04.365Z' | timeFormat('MMMM Do YYYY, h:mm:ss a') }}
