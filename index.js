@@ -44,7 +44,7 @@ module.exports = {
             const modifyTpl = options.modifyTpl;
             const timeStampFormat = options.timeStampFormat;
 
-            return execa.shell(`git log --format="%an|%at" -- ${page.rawPath}`, {
+            return execa.shell(`git log --format="%an|%at" -- "${page.rawPath}"`, {
                 cwd: bookRoot
             }).then((ret) => {
                 // none commit to this file
