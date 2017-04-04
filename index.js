@@ -46,7 +46,7 @@ module.exports = {
       return execa.shell(`git log --format="%an|%at" -- "${page.rawPath}"`, {
         cwd: bookRoot
       }).then(ret => {
-                // None commit to this file
+        // None commit to this file
         if (!ret.stdout) {
           this.log.debug(`none commit to file ${page.path}`)
           return page
