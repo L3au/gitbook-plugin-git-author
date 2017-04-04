@@ -10,11 +10,12 @@
   },
   "scripts": {
     "lint": "xo --fix",
+    "test": "npm run lint",
     "precommit": "npm run lint",
-    "prepublish": "npm run lint"
+    "prepare": "npm run lint"
   },
   "files": [
-    "assets/"
+    "assets"
   ],
   "keywords": [
     "gitbook",

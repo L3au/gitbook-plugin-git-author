@@ -2,6 +2,8 @@
 
 This is a plugin for automatically adding author and timestamp to each gitbook article, including creator and last modified user from git commits
 
+[![Build Status](https://travis-ci.org/L3au/gitbook-plugin-git-author.svg?branch=master)](https://travis-ci.org/L3au/gitbook-plugin-git-author)
+
 ![git-author-preview](https://raw.githubusercontent.com/L3au/gitbook-plugin-git-author/master/preview.png)
 
 ## Usage
