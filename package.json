@@ -8,6 +8,14 @@
     "node": ">4.0.0",
     "gitbook": ">3.0.0"
   },
+  "scripts": {
+    "lint": "xo --fix",
+    "precommit": "npm run lint",
+    "prepublish": "npm run lint"
+  },
+  "files": [
+    "assets/"
+  ],
   "keywords": [
     "gitbook",
     "plugin",
@@ -32,5 +40,13 @@
   "dependencies": {
     "execa": "^0.6.3",
     "moment": "^2.18.1"
+  },
+  "devDependencies": {
+    "husky": "^0.13.3",
+    "xo": "^0.18.1"
+  },
+  "xo": {
+    "space": true,
+    "semicolon": false
   }
 }
