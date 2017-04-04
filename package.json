@@ -10,7 +10,7 @@
   },
   "scripts": {
     "lint": "xo --fix",
-    "test": "npm run lint",
+    "test": "npm run lint && nyc ava",
     "precommit": "npm run lint",
     "prepare": "npm run lint"
   },
@@ -43,11 +43,24 @@
     "moment": "^2.18.1"
   },
   "devDependencies": {
+    "ava": "^0.18.2",
     "husky": "^0.13.3",
+    "nyc": "^10.2.0",
+    "sinon": "^2.1.0",
     "xo": "^0.18.1"
   },
   "xo": {
     "space": true,
     "semicolon": false
+  },
+  "ava": {
+    "verbose": true
+  },
+  "nyc": {
+    "reporter": [
+      "html",
+      "text",
+      "text-summary"
+    ]
   }
 }
