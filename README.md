@@ -4,6 +4,7 @@ This is a plugin for automatically adding author and timestamp to each gitbook a
 
 [![npm](https://img.shields.io/npm/v/gitbook-plugin-git-author.svg)](https://www.npmjs.com/package/gitbook-plugin-git-author)
 [![travis](https://img.shields.io/travis/L3au/gitbook-plugin-git-author.svg)](https://travis-ci.org/L3au/gitbook-plugin-git-author)
+[![codecov](https://codecov.io/gh/L3au/gitbook-plugin-git-author/branch/master/graph/badge.svg)](https://codecov.io/gh/L3au/gitbook-plugin-git-author)
 [![npm-downloads](https://img.shields.io/npm/dm/gitbook-plugin-git-author.svg)](https://www.npmjs.com/package/gitbook-plugin-git-author)
 
 ![git-author-preview](https://raw.githubusercontent.com/L3au/gitbook-plugin-git-author/master/preview.png)
