@@ -1,5 +1,7 @@
 # gitbook-plugin-git-author
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/L3au/gitbook-plugin-git-author.svg)](https://greenkeeper.io/)
+
 This is a plugin for automatically adding author and timestamp to each gitbook article, including creator and last modified user from git commits
 
 [![npm](https://img.shields.io/npm/v/gitbook-plugin-git-author.svg)](https://www.npmjs.com/package/gitbook-plugin-git-author)
