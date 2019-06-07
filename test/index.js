@@ -3,7 +3,7 @@
 const test = require('ava')
 const execa = require('execa')
 const sinon = require('sinon')
-const plugin = require('./')
+const plugin = require('../src')
 
 test('gitbook plugin structure', t => {
   t.deepEqual(Object.keys(plugin), ['website', 'filters', 'hooks'])

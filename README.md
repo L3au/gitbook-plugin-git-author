@@ -1,20 +1,17 @@
 # gitbook-plugin-git-author
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/L3au/gitbook-plugin-git-author.svg)](https://greenkeeper.io/)
-
-This is a plugin for automatically adding author and timestamp to each gitbook article, including creator and last modified user from git commits
+This is a plugin for automatically adding author and timestamp to each gitbook page, including creator and last-modified from git commits
 
 [![npm](https://img.shields.io/npm/v/gitbook-plugin-git-author.svg)](https://www.npmjs.com/package/gitbook-plugin-git-author)
 [![travis](https://img.shields.io/travis/L3au/gitbook-plugin-git-author.svg)](https://travis-ci.org/L3au/gitbook-plugin-git-author)
 [![codecov](https://codecov.io/gh/L3au/gitbook-plugin-git-author/branch/master/graph/badge.svg)](https://codecov.io/gh/L3au/gitbook-plugin-git-author)
 [![npm-downloads](https://img.shields.io/npm/dm/gitbook-plugin-git-author.svg)](https://www.npmjs.com/package/gitbook-plugin-git-author)
 
-![git-author-preview](https://raw.githubusercontent.com/L3au/gitbook-plugin-git-author/master/preview.png)
+![git-author-preview](https://raw.githubusercontent.com/L3au/gitbook-plugin-git-author/master/src/assets/preview.png)
 
 ## Usage
 
 ### Recommended Environments
-
 
 - Node.js 4.0+
 - npm 3.0+
@@ -62,8 +59,8 @@ content
 <p>content</p>
 
 <div class="git-author-container git-author-bottom">
-    <div class="modified">Last modified by someone 2016-06-06 06:06:06</div>
-    <div class="created">Created by someone 2016-06-06 06:06:06</div>
+  <div class="modified">Last modified by someone 2016-06-06 06:06:06</div>
+  <div class="created">Created by someone 2016-06-06 06:06:06</div>
 </div>
 ```
 
@@ -73,15 +70,15 @@ content
 
 default: `bottom`
 
-git-author content position in the article. `top` or `bottom` 
+git-author content position in the article. `top` or `bottom`
 
 this will add a `git-author-{position}` className to `git-author-container`
 
-### `createTpl`  `modifyTpl`
+### `createTpl` `modifyTpl`
 
 You can use `{user}` `{timeStamp}` as placeholder for username and timeStamp
 
-default: 
+default:
 
 createTpl: `Created by {user} {timeStamp}`
 
